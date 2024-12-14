@@ -4,6 +4,7 @@ import { RecipePage } from './pages/RecipePage'
 import { Header } from './components/Header'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Suspense } from 'react'
+import ErrorPage from './pages/ErrorPage'
 
 const queryClient = new QueryClient()
 
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          <Route path="*" element={<ErrorPage />} />
           <Route path="/" element={<Homepage />} />
           <Route
             path="/recipe/:name"

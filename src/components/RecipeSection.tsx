@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { RecipeCard } from './RecipeCard'
 import { Suspense } from 'react'
+import ErrorPage from '../pages/ErrorPage'
 
 export interface Recipe {
   id: number
@@ -23,15 +24,15 @@ export const RecipeSection = () => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center w-full h-full">
-        <h2 className='mt-40'>Loading...</h2>
+      <div className="mt-14">
+        <div className="loader"></div>
       </div>
     )
   }
   if (isError) {
     return (
-      <div className="flex items-center justify-center w-full h-full">
-        <h2 className='mt-40'>Something went wrong!</h2>
+      <div className="w-full h-full">
+        <ErrorPage />
       </div>
     )
   }

@@ -2,7 +2,7 @@ import heroImg from '../assets/images/hero.png'
 
 export const HeroSection = () => {
   return (
-    <div className="bg-secondary w-screen lg:h-[115vh] mt-14 md:mt-20 lg:mt-8 flex flex-col lg:flex-row-reverse items-center justify-center gap-4 lg:gap-12 p-8 md:px-12 lg:px-24 py-12 text-lg text-quaternary font-montserrat">
+    <div className="bg-secondary w-screen lg:h-[110vh] mt-14 md:mt-20 lg:mt-8 flex flex-col lg:flex-row-reverse items-center justify-center gap-4 lg:gap-12 p-8 md:px-12 lg:px-24 py-12 text-lg text-quaternary font-montserrat">
       <div className="hero-img lg:w-1/2">
         <img src={heroImg} alt="hero image" />
       </div>

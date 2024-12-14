@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import imgClock from '../assets/mdi--clock-time-eight-outline 1.svg'
 import imgFire from '../assets/mdi--fire.svg'
 import imgStar from '../assets/mdi--star.svg'
+import ErrorPage from './ErrorPage'
 
 export const RecipePage = () => {
   const { name } = useParams()
@@ -25,11 +26,19 @@ export const RecipePage = () => {
   }, [data])
 
   if (isLoading) {
-    return <h2>Loading...</h2>
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <div className="loader"></div>
+      </div>
+    )
   }
 
   if (isError) {
-    return <h2>Something went wrong!</h2>
+    return (
+      <div className="w-full h-full">
+        <ErrorPage />
+      </div>
+    )
   }
 
   if (!data) {
