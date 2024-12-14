@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 const ErrorPage = () => {
   const navigate = useNavigate()
   return (
-    <div className="main flex flex-col items-center gap-8 w-screen h-screen">
+    <div className="main flex flex-col items-center gap-8 w-screen h-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
