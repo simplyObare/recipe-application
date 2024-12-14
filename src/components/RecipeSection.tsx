@@ -24,14 +24,14 @@ export const RecipeSection = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center w-full h-full">
-        <h2>Loading...</h2>
+        <h2 className='mt-40'>Loading...</h2>
       </div>
     )
   }
   if (isError) {
     return (
-      <div className="grid place-content-center w-full h-full">
-        <h2>Something went wrong!</h2>
+      <div className="flex items-center justify-center w-full h-full">
+        <h2 className='mt-40'>Something went wrong!</h2>
       </div>
     )
   }
