@@ -112,7 +112,7 @@ export const RecipePage = () => {
               {recipe.ingredients.map((ingredient, index) => (
                 <li key={index} className="flex items-baseline mb-3">
                   <button
-                    className="btn-list w-6 h-6 flex items-center justify-center border border-tertiary rounded-full mr-2 transition duration-300 ease-in-out"
+                    className="btn-list w-6 h-6 min-w-fit min-h-fit flex items-center justify-center border border-tertiary rounded-full mr-2 transition duration-300 ease-in-out"
                     onClick={(e) => {
                       e.preventDefault()
                       const btnDot = e.currentTarget.querySelector('.btn-dot')
